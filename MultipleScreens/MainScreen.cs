@@ -12,6 +12,8 @@ namespace MultipleScreens
 {
     public partial class MainScreen : UserControl
     {
+        
+
         public MainScreen()
         {
             InitializeComponent();
@@ -19,6 +21,8 @@ namespace MultipleScreens
 
         private void startButton_Click(object sender, EventArgs e)
         {
+            Form1.timesPlayed++;
+
             Form f = this.FindForm();
             f.Controls.Remove(this);
 

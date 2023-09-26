@@ -12,6 +12,9 @@ namespace MultipleScreens
 {
     public partial class Form1 : Form
     {
+        //variables shared across screens
+        public static int timesPlayed = 0;
+
         public Form1()
         {
             InitializeComponent();

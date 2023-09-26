@@ -15,6 +15,7 @@ namespace MultipleScreens
         public SecondScreen()
         {
             InitializeComponent();
+            playedLabel.Text = Form1.timesPlayed + "";
         }
 
         private void backButton_Click(object sender, EventArgs e)
