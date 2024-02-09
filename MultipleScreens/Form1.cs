@@ -18,11 +18,28 @@ namespace MultipleScreens
         {
             InitializeComponent();
 
-            MainScreen ms = new MainScreen();
-
-            ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
-            this.Controls.Add(ms);
-
+            ChangeScreen(this, new MainScreen());
         }
+
+        public static void ChangeScreen(object sender, UserControl next)
+        {
+            Form f;
+
+            if (sender is Form)
+            {
+                f = (Form)sender;
+            }
+            else
+            {
+                UserControl current = (UserControl)sender;
+                f = current.FindForm();
+                f.Controls.Remove(current);
+            }
+
+            next.Location = new Point((f.Width - next.Width) / 2, (f.Height - next.Height) / 2);
+
+            f.Controls.Add(next);
+        }
+
     }
 }

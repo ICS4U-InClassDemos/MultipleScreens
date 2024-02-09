@@ -22,13 +22,8 @@ namespace MultipleScreens
         {
             Form1.counter++;
 
-            Form f = this.FindForm();
-            f.Controls.Remove(this);
+            Form1.ChangeScreen(this, new SecondScreen());
 
-            SecondScreen ss = new SecondScreen();
-            ss.Location = new Point((f.Width - ss.Width) / 2, (f.Height - ss.Height) / 2);
-
-            f.Controls.Add(ss);
         }
     }
 }

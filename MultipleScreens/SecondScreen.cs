@@ -20,14 +20,9 @@ namespace MultipleScreens
 
         private void backButton_Click(object sender, EventArgs e)
         {
+
+            Form1.ChangeScreen(this, new MainScreen());
             
-            Form f = this.FindForm();
-            f.Controls.Remove(this);
-
-            MainScreen ms = new MainScreen();
-            ms.Location = new Point((f.Width - ms.Width) / 2, (f.Height - ms.Height) / 2);
-
-            f.Controls.Add(ms);
         }
     }
 }
