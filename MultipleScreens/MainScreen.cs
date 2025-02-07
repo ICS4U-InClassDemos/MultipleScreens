@@ -25,6 +25,9 @@ namespace MultipleScreens
             SecondScreen ss = new SecondScreen();
             ss.Location = new Point((f.Width - ss.Width) / 2, (f.Height - ss.Height) / 2);
             f.Controls.Add(ss);
+
+            Form1.counter++;
+            
         }
 
         private void exitButton_Click(object sender, EventArgs e)

@@ -15,6 +15,7 @@ namespace MultipleScreens
         public SecondScreen()
         {
             InitializeComponent();
+            counterLabel.Text = Form1.counter + "";
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -26,5 +27,11 @@ namespace MultipleScreens
             ms.Location = new Point((f.Width - ms.Width) / 2, (f.Height - ms.Height) / 2);
             f.Controls.Add(ms);
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }
